@@ -15,6 +15,8 @@
 		265B4A7E252FB5200051674A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 265B4A7D252FB5200051674A /* Assets.xcassets */; };
 		265B4A81252FB5200051674A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 265B4A7F252FB5200051674A /* LaunchScreen.storyboard */; };
 		265B4A8C252FB5200051674A /* Cavista_Code_ChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265B4A8B252FB5200051674A /* Cavista_Code_ChallengeTests.swift */; };
+		56F6CA936577DD8111FBED0D /* Pods_Cavista_Code_Challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21C8F6194196B5EE08CF63B7 /* Pods_Cavista_Code_Challenge.framework */; };
+		E949DF63355E51D4F80677F1 /* Pods_Cavista_Code_ChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28E0078CE6377E9565A48653 /* Pods_Cavista_Code_ChallengeTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01186C125C5200E8726205D3 /* Pods-Cavista Code Challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cavista Code Challenge.debug.xcconfig"; path = "Target Support Files/Pods-Cavista Code Challenge/Pods-Cavista Code Challenge.debug.xcconfig"; sourceTree = "<group>"; };
+		21C8F6194196B5EE08CF63B7 /* Pods_Cavista_Code_Challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cavista_Code_Challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		265B4A6E252FB51F0051674A /* Cavista Code Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cavista Code Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		265B4A71252FB51F0051674A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		265B4A73252FB51F0051674A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +44,10 @@
 		265B4A87252FB5200051674A /* Cavista Code ChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cavista Code ChallengeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		265B4A8B252FB5200051674A /* Cavista_Code_ChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cavista_Code_ChallengeTests.swift; sourceTree = "<group>"; };
 		265B4A8D252FB5200051674A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28E0078CE6377E9565A48653 /* Pods_Cavista_Code_ChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cavista_Code_ChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E1BCE3DB53959CFEF283456 /* Pods-Cavista Code Challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cavista Code Challenge.release.xcconfig"; path = "Target Support Files/Pods-Cavista Code Challenge/Pods-Cavista Code Challenge.release.xcconfig"; sourceTree = "<group>"; };
+		72F846F67C42197C4C780FA6 /* Pods-Cavista Code ChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cavista Code ChallengeTests.release.xcconfig"; path = "Target Support Files/Pods-Cavista Code ChallengeTests/Pods-Cavista Code ChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
+		E47B5435450DF3F64DB619C0 /* Pods-Cavista Code ChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cavista Code ChallengeTests.debug.xcconfig"; path = "Target Support Files/Pods-Cavista Code ChallengeTests/Pods-Cavista Code ChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56F6CA936577DD8111FBED0D /* Pods_Cavista_Code_Challenge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E949DF63355E51D4F80677F1 /* Pods_Cavista_Code_ChallengeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +76,8 @@
 				265B4A70252FB51F0051674A /* Cavista Code Challenge */,
 				265B4A8A252FB5200051674A /* Cavista Code ChallengeTests */,
 				265B4A6F252FB51F0051674A /* Products */,
+				65274240CACCE0FB017D2C77 /* Pods */,
+				B2E95C9BCF8D19D33186035C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,6 +114,27 @@
 			path = "Cavista Code ChallengeTests";
 			sourceTree = "<group>";
 		};
+		65274240CACCE0FB017D2C77 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				01186C125C5200E8726205D3 /* Pods-Cavista Code Challenge.debug.xcconfig */,
+				3E1BCE3DB53959CFEF283456 /* Pods-Cavista Code Challenge.release.xcconfig */,
+				E47B5435450DF3F64DB619C0 /* Pods-Cavista Code ChallengeTests.debug.xcconfig */,
+				72F846F67C42197C4C780FA6 /* Pods-Cavista Code ChallengeTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B2E95C9BCF8D19D33186035C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				21C8F6194196B5EE08CF63B7 /* Pods_Cavista_Code_Challenge.framework */,
+				28E0078CE6377E9565A48653 /* Pods_Cavista_Code_ChallengeTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -109,9 +142,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 265B4A90252FB5200051674A /* Build configuration list for PBXNativeTarget "Cavista Code Challenge" */;
 			buildPhases = (
+				0D9C890BC7A77B0C804196F4 /* [CP] Check Pods Manifest.lock */,
 				265B4A6A252FB51F0051674A /* Sources */,
 				265B4A6B252FB51F0051674A /* Frameworks */,
 				265B4A6C252FB51F0051674A /* Resources */,
+				4E59CBBD2008A3348193C8EF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,6 +161,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 265B4A93252FB5200051674A /* Build configuration list for PBXNativeTarget "Cavista Code ChallengeTests" */;
 			buildPhases = (
+				B9D0B22098672CE66E25F778 /* [CP] Check Pods Manifest.lock */,
 				265B4A83252FB5200051674A /* Sources */,
 				265B4A84252FB5200051674A /* Frameworks */,
 				265B4A85252FB5200051674A /* Resources */,
@@ -197,6 +233,70 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0D9C890BC7A77B0C804196F4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Cavista Code Challenge-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4E59CBBD2008A3348193C8EF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Cavista Code Challenge/Pods-Cavista Code Challenge-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Cavista Code Challenge/Pods-Cavista Code Challenge-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Cavista Code Challenge/Pods-Cavista Code Challenge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B9D0B22098672CE66E25F778 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Cavista Code ChallengeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		265B4A6A252FB51F0051674A /* Sources */ = {
@@ -364,6 +464,7 @@
 		};
 		265B4A91252FB5200051674A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01186C125C5200E8726205D3 /* Pods-Cavista Code Challenge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -381,6 +482,7 @@
 		};
 		265B4A92252FB5200051674A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E1BCE3DB53959CFEF283456 /* Pods-Cavista Code Challenge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -398,6 +500,7 @@
 		};
 		265B4A94252FB5200051674A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E47B5435450DF3F64DB619C0 /* Pods-Cavista Code ChallengeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -419,6 +522,7 @@
 		};
 		265B4A95252FB5200051674A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72F846F67C42197C4C780FA6 /* Pods-Cavista Code ChallengeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

@@ -1,0 +1,6 @@
+framework module Pods_Cavista_Code_Challenge {
+  umbrella header "Pods-Cavista Code Challenge-umbrella.h"
+
+  export *
+  module * { export * }
+}
