@@ -10,25 +10,33 @@ import XCTest
 @testable import Cavista_Code_Challenge
 
 class Cavista_Code_ChallengeTests: XCTestCase {
+    var productModel:ProductViewModel!
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    override func setUp() {
+      super.setUp()
+      productModel = ProductViewModel()
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    override func tearDown() {
+      productModel = nil
+      super.tearDown()
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    // Asynchronous test: success fast, failure slow
+    func testValidCallToGetProducts() {
+        
+        let promise = expectation(description: "Status code: 200")
+        productModel.getProducts { (result) in
+            
+            switch result {
+            case .success( _):
+                promise.fulfill()
+                
+            case .failure(let error):
+                XCTFail("Error: \(error.localizedDescription)")
+            }
         }
+        wait(for: [promise], timeout: 5)
     }
 
 }
