@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		262B4E78254DE82C00C520E2 /* ProductDbManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262B4E77254DE82C00C520E2 /* ProductDbManager.swift */; };
 		265B4A72252FB51F0051674A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265B4A71252FB51F0051674A /* AppDelegate.swift */; };
 		265B4A74252FB51F0051674A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265B4A73252FB51F0051674A /* SceneDelegate.swift */; };
 		265B4A7C252FB51F0051674A /* Cavista_Code_Challenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 265B4A7A252FB51F0051674A /* Cavista_Code_Challenge.xcdatamodeld */; };
@@ -38,6 +39,7 @@
 /* Begin PBXFileReference section */
 		014BCEB00114ECDE43692434 /* Pods-Cavista Code Challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cavista Code Challenge.debug.xcconfig"; path = "Target Support Files/Pods-Cavista Code Challenge/Pods-Cavista Code Challenge.debug.xcconfig"; sourceTree = "<group>"; };
 		0C09D614CD9DCBCE6DD272EA /* Pods_Cavista_Code_ChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cavista_Code_ChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		262B4E77254DE82C00C520E2 /* ProductDbManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDbManager.swift; sourceTree = "<group>"; };
 		265B4A6E252FB51F0051674A /* Cavista Code Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cavista Code Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		265B4A71252FB51F0051674A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		265B4A73252FB51F0051674A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				265B4A9A252FBEA10051674A /* ProductService.swift */,
+				262B4E77254DE82C00C520E2 /* ProductDbManager.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 				265B4AA5252FD1AB0051674A /* ProductViewModel.swift in Sources */,
 				265B4AA8252FE4740051674A /* ProductListViewController.swift in Sources */,
 				265B4AA2252FC25C0051674A /* Product.swift in Sources */,
+				262B4E78254DE82C00C520E2 /* ProductDbManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

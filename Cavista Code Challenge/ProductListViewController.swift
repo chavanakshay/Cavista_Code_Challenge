@@ -10,21 +10,23 @@ import UIKit
 import SnapKit
 
 class ProductListViewController: UIViewController {
-    let viewModel = ProductViewModel()
-    let tableView = UITableView()
-    var label:UILabel?
+    private let viewModel = ProductViewModel()
+    private let tableView = UITableView()
+    private var label:UILabel?
     override func viewDidLoad() {
         super.viewDidLoad()
         createUIComponants()
         self.view.backgroundColor = UIColor.white
-        viewModel.getProducts { (result) in
+        viewModel.getProducts {[weak self] (result) in
             switch(result){
-            case .success( _):
-                self.label?.isHidden = true
-                self.tableView.reloadData()
-            case.failure(let error):
-                print(error.localizedDescription)
+                case .success( _):
+                    self?.label?.isHidden = true
+                    self?.tableView.reloadData()
+                case.failure(let error):
+                    guard case ProductError.nodataExist(let message) = error else { fatalError() }
+                    self?.label?.text = message
             }
+            
         }
     }
 }
@@ -37,19 +39,20 @@ extension ProductListViewController{
         self.showNothing()
     }
     
-    func showNothing()  {
+    private func showNothing()  {
         label = UILabel(frame: .zero)
         label?.numberOfLines = 0
         label?.textAlignment = .center
         label?.font = .boldSystemFont(ofSize: 20)
         label?.text = "Loading..."
-
+        
         self.view.addSubview(label!)
         
         label?.snp.makeConstraints({ (make) in
             make.top.bottom.left.right.equalToSuperview().offset(0)
         })
     }
+    
     
     private func createTableView(){
         self.view.addSubview(tableView)
@@ -63,8 +66,8 @@ extension ProductListViewController{
         }
         
         tableView.register(ProductTableViewCell.self, forCellReuseIdentifier: ProductTableViewCell.identifier)
-                tableView.dataSource = self
-                tableView.delegate = self
+        tableView.dataSource = self
+        tableView.delegate = self
         tableView.estimatedRowHeight = 100
     }
 }
@@ -74,12 +77,12 @@ extension ProductListViewController:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.products?.count ?? 0
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ProductTableViewCell.identifier, for: indexPath) as! ProductTableViewCell
         if let product = viewModel.products?[indexPath.item] {
             cell.updateData(product: product)
-
+            
         }
         return cell
     }

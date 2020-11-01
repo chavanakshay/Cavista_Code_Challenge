@@ -10,9 +10,10 @@ import UIKit
 
 class ProductDescriptionViewController: UIViewController {
     weak var product:Product?
-    var label:UILabel?
-    var imageView:UIImageView?
-    let viewModel = ProductDataViewModel()
+    private var textView:UITextView?
+    private var imageView:UIImageView?
+    private var label:UILabel?
+    private let viewModel = ProductDataViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,43 +22,43 @@ class ProductDescriptionViewController: UIViewController {
         createUI()
         // Do any additional setup after loading the view.
     }
-
+    
 }
 
 
 //This extention is to create the UI Componants
 extension ProductDescriptionViewController{
-    func createUI()  {
+    private func createUI()  {
         guard let type = product?.type else {
             return
         }
         
         switch type {
-        case TYPE.image:
-            showImage()
-        case TYPE.string:
-            showText()
-        default:
-            showNothing()
+            case Type.image:
+                showImage()
+            case Type.string:
+                showText()
+            default:
+                showNothing()
         }
     }
     
-    func showText()  {
-        label = UILabel(frame: .zero)
-        label?.numberOfLines = 0
-        label?.textAlignment = .center
+    private func showText()  {
+        textView = UITextView(frame: .zero)
+        textView?.textAlignment = .natural
         if let text = product?.data {
-            label?.text = text
+            textView?.text = text
         }
-        self.view.addSubview(label!)
-        
-        label?.snp.makeConstraints({ (make) in
-            make.top.bottom.left.right.equalToSuperview().offset(0)
+        self.view.addSubview(textView!)
+        textView?.snp.makeConstraints({ (make) in
+            make.top.bottom.left.right.equalToSuperview()
         })
-        
+        textView?.isScrollEnabled = false
+        textView?.isScrollEnabled = true
+        textView?.isEditable = false
     }
     
-    func showImage()  {
+    private func showImage()  {
         imageView = UIImageView(frame: .zero)
         imageView?.contentMode = .scaleAspectFit
         self.view.addSubview(imageView!)
@@ -75,27 +76,27 @@ extension ProductDescriptionViewController{
             make.top.bottom.left.right.equalToSuperview()
         })
         
-            viewModel.getImageFor(product: product!) { (result) in
-                switch result {
+        viewModel.getImageFor(product: product!) { (result) in
+            switch result {
                 case .success(_):
                     if(self.viewModel.image == nil){
                         label.text = "Something went wrong!"
                     }else{
-                    label.removeFromSuperview()
-                    self.imageView?.image = self.viewModel.image
-                    }
+                        label.removeFromSuperview()
+                        self.imageView?.image = self.viewModel.image
+                }
                 case .failure(let error):
                     label.text = error.localizedDescription
-                }
             }
+        }
     }
     
-    func showNothing()  {
+    private func showNothing()  {
         label = UILabel(frame: .zero)
         label?.numberOfLines = 0
         label?.textAlignment = .center
         label?.text = "No Data available!"
-
+        
         self.view.addSubview(label!)
         
         label?.snp.makeConstraints({ (make) in

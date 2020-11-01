@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class ProductViewModel {
     var products:[Product]?
@@ -17,11 +18,12 @@ class ProductViewModel {
         //check for the network availability
         if Connectivity.isConnectedToInternet {
             //Get products from server and return
-            service.getProductsFromServer { (result) in
+            service.getProductsFromServer {[weak self] (result) in
                 switch result {
                     case .success(let products):
-                        self.products = products
-                        self.sortProducts()
+                        self?.products = products
+                        self?.sortProducts()
+                        service.handleIfImageExistFor(products: products)
                         completionHandler(.success(true))
                     case .failure(let error):
                         completionHandler(.failure(error))
@@ -29,17 +31,24 @@ class ProductViewModel {
             }
         }else{
             //get products from local
-            self.products = service.getAllProducts().filter({ (product) -> Bool in
-                true
-            })
-            self.sortProducts()
-            completionHandler(.success(true))
+            if let dbManager = try?ProductDbManager(){
+                self.products = dbManager.getAllProducts().filter({ (product) -> Bool in
+                    true
+                })
+            }
+            
+            if self.products?.count == 0 {
+                completionHandler(.failure(ProductError.nodataExist(message: "No products available.")))
+            }else{
+                self.sortProducts()
+                completionHandler(.success(true))
+            }
         }
         
     }
     
     //This will sort the products in assending order
-    func sortProducts(){
+    private func sortProducts(){
         products?.sort(by: { (product1, product2) -> Bool in
             guard let type1 = product1.type else{
                 return false
@@ -51,3 +60,4 @@ class ProductViewModel {
         })
     }
 }
+
