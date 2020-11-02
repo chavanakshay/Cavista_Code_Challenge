@@ -11,15 +11,15 @@ import XCTest
 
 class Cavista_Code_ChallengeTests: XCTestCase {
     var productModel:ProductViewModel!
-
+    
     override func setUp() {
-      super.setUp()
-      productModel = ProductViewModel()
+        super.setUp()
+        productModel = ProductViewModel()
     }
-
+    
     override func tearDown() {
-      productModel = nil
-      super.tearDown()
+        productModel = nil
+        super.tearDown()
     }
     
     // Asynchronous test: success fast, failure slow
@@ -29,14 +29,14 @@ class Cavista_Code_ChallengeTests: XCTestCase {
         productModel.getProducts { (result) in
             
             switch result {
-            case .success( _):
-                promise.fulfill()
+                case .success( _):
+                    promise.fulfill()
                 
-            case .failure(let error):
-                XCTFail("Error: \(error.localizedDescription)")
+                case .failure(let error):
+                    XCTFail("Error: \(error.localizedDescription)")
             }
         }
         wait(for: [promise], timeout: 5)
     }
-
+    
 }
